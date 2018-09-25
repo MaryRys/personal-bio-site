@@ -14,7 +14,11 @@ h1 {
     background-color: lightslategray;
 }
 
-.projects {
+#projectsPage {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: whitesmoke;
+    
 }

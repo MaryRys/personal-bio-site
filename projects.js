@@ -4,7 +4,7 @@ let projects = [
         screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
         description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
         technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-        available: false,
+        available: true,
         url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
         githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
      },
@@ -50,7 +50,7 @@ let projects = [
             if (projects[i].available === true)
             newString+= `<div id="projectsPage">`
             newString+= `<h3>${projects[i].title}<h3>`
-            newString+= `<img class="screenshot" src="${projects[i].screenshot}"></img>`
+            newString+= `<img src="${projects[i].screenshot}"></img>`
             newString+= `<p>${projects[i].description}</p>`
             newString+= `<p>${projects[i].technologiesUsed}</p>`
             newString+= `<a href="https://${projects[i].url}">Link</a>`
@@ -61,3 +61,14 @@ let projects = [
     };
 
     createProjectCards();
+
+    const registerNavEvents = () => {
+        document.getElementById('navToBio').addEventListener('click', showBio);
+        document.getElementById('navToTechnologies').addEventListener('click', showTech);
+        document.getElementById('navToProjects').addEventListener('click', showProjects);
+    }
+    registerNavEvents();
+
+    const showBio = () => {
+        
+    }
