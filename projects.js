@@ -47,6 +47,7 @@ let projects = [
     const createProjectCards = () => {
         let newString = " ";
         for (let i = 0; i < projects.length; i++ ) {
+            if (projects[i].available === true)
             newString+= `<div id="projectsPage">`
             newString+= `<h3>${projects[i].title}<h3>`
             newString+= `<img class="screenshot" src="${projects[i].screenshot}"></img>`
@@ -55,9 +56,7 @@ let projects = [
             newString+= `<a href="https://${projects[i].url}">Link</a>`
             newString+= `<a href="https://${projects[i].githubUrl}">github</a>`
             newString+= `</div>`
-            if (projects[i].available === true) {
-                printToDom(newString, "projectsPage");
-            };
+            printToDom(newString, "projectsPage");
         };
     };
 
