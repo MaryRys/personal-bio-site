@@ -14,11 +14,19 @@ h1 {
     background-color: lightslategray;
 }
 
+.titles {
+    text-align: center;
+}
+
 #projectsPage {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+#projectsContainer {
+    align-content: center;
     width: 50%;
     background-color: whitesmoke;
+    padding: 10px;
+    border: grey solid 10px;
     
 }

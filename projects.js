@@ -39,6 +39,7 @@ let projects = [
         githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
      }
     ];
+
         const printToDom = (stringToPrint, divId) => {
         const selectedDiv = document.getElementById(divId);
         selectedDiv.innerHTML = stringToPrint;
@@ -56,11 +57,30 @@ let projects = [
             newString+= `<a href="https://${projects[i].url}">Link</a>`
             newString+= `<a href="https://${projects[i].githubUrl}">github</a>`
             newString+= `</div>`
-            printToDom(newString, "projectsPage");
+            printToDom(newString, "projectsContainer");
         };
     };
 
     createProjectCards();
+
+    const showBio = () => {
+        document.getElementById('bioPage').scrollTo();
+        document.getElementById('bioPage').style.display = "block"; 
+        document.getElementById('technologiesPage').style.display = "none";
+        document.getElementById('projectsPage').style.display = "none";
+    }
+    const showTech = () => {
+        document.getElementById('technologiesPage').scrollTo();
+        document.getElementById('technologiesPage').style.display = "block";
+        document.getElementById('bioPage').style.display = "none";
+        document.getElementById('projectsPage').style.display = "none";
+    }
+    const showProjects = () => {
+        document.getElementById('projectsPage').scrollTo();
+        document.getElementById('projectsPage').style.display = "inline";
+        document.getElementById('technologiesPage').style.display = "none";
+        document.getElementById('bioPage').style.display = "none";
+    }
 
     const registerNavEvents = () => {
         document.getElementById('navToBio').addEventListener('click', showBio);
@@ -68,7 +88,3 @@ let projects = [
         document.getElementById('navToProjects').addEventListener('click', showProjects);
     }
     registerNavEvents();
-
-    const showBio = () => {
-        
-    }
