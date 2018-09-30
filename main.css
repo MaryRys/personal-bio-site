@@ -2,7 +2,7 @@ body {
     background-color: aquamarine;
 }
 
-h1 {
+#title {
     text-align: center;
     color: lightcoral;
 }
@@ -14,7 +14,19 @@ h1 {
     background-color: lightslategray;
 }
 
-.projects {
+.titles {
+    text-align: center;
+}
+
+#projectsPage {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+#projectsContainer {
+    align-content: center;
+    width: 50%;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: grey solid 10px;
+    
 }
