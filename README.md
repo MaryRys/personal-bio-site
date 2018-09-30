@@ -7,4 +7,9 @@ This website is a biography of myself and my projects at Nashville Software Scho
 <img src="screenshots/screenshot1.png">
 
 ### Instructions
-Navigate to different sections with the nav bar. 
+<li>Use npm to install http-server in your terminal:<br>
+npm install -g http-server
+<li>Run the server in your terminal
+hs -p 9999
+<li>Open chrome and navigate to:<br>
+localhost:9999
